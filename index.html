@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vrsar 2026</title>
+<meta name="description" content="Itinerář rodinného výletu do Istrie (Vrsar), 27. 10. – 1. 11. 2026: trasa, ubytování, víno, olivy, lanýže, děti.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Rodinný výlet · 2 dospělí + 2 malé děti</p>
+    <h1>Istrie 2026</h1>
+    <p class="dates">Út 27. 10. – Ne 1. 11. 2026 · Maistra Resort Belvedere, Vrsar</p>
+    <nav class="toc">
+      <a href="#prehled">Přehled</a>
+      <a href="#cesta">Cesta</a>
+      <a href="#hotel">Hotel</a>
+      <a href="#itinerar">Itinerář</a>
+      <a href="#atrakce">S dětmi</a>
+      <a href="#gastro">Víno a jídlo</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#rozpocet">Rozpočet</a>
+      <a href="#overit">Zavolat</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section id="prehled">
+  <h2>Přehled</h2>
+  <div class="facts">
+    <div class="fact"><span class="lbl">Trasa</span><strong>~860 km</strong><span>Lípa n. O. → Vrsar, 9–10 h čisté jízdy</span></div>
+    <div class="fact"><span class="lbl">Cesta tam</span><strong>2 dny</strong><span>nocleh ve Štýrském Hradci / Mariboru</span></div>
+    <div class="fact"><span class="lbl">V Istrii</span><strong>3 plné dny</strong><span>29., 30. a 31. 10.</span></div>
+    <div class="fact"><span class="lbl">Odhad (bez hotelu)</span><strong id="factTotal">—</strong><span>viz <a href="#rozpocet">rozpočet</a></span></div>
+  </div>
+  <div class="callouts">
+    <div class="callout warn"><strong>Hotel Belvedere si ověřte telefonem hned.</strong> Rezervační portály uvádějí sezónu do 3. 11., takže 27. 10.–1. 11. je v pořádku. Oficiální web Maistra ale data neuvádí a velké hotely v Vrsaru často zavírají koncem října. Zeptejte se, co je otevřené (restaurace, vnitřní bazén, dětský klub): <a href="tel:+385528002050">+385 52 800 250</a>.</div>
+    <div class="callout warn"><strong>Brněnské tunely.</strong> Pisárecký tunel a tunel Hlinky jsou zavřené zhruba od 12. 10. do 20. 11. 2026, tedy při cestě tam i zpět. Jeďte po D1 kolem Brna, ne přes městský okruh.</div>
+    <div class="callout info"><strong>Svátek 1. 11.</strong> Všech svatých je v Chorvatsku státní svátek. Obchody, trh v Poreči a bazilika jsou zavřené. Nakupte 31. 10.</div>
+    <div class="callout info"><strong>Světlo a počasí:</strong> hodiny se 25. 10. posouvají. Slunce zapadá kolem 16:45, ve dne 12–18 °C, v listopadu 9–15 °C, časté deště. Moře ~17–20 °C, na koupání příliš chladné.</div>
+    <div class="callout warn"><strong>Zavřeno:</strong> Dinopark Funtana (sezóna skončila), Aquarium Rovinj (pravděpodobně od 16. 10.) a Aquacolors Poreč.</div>
+  </div>
+</section>
+
+<section id="cesta">
+  <h2>Cesta autem</h2>
+  <div class="grid2">
+    <div class="card pad">
+      <h4>Doporučená trasa</h4>
+      <p class="small">Lípa nad Orlicí → Brno (po <strong>D1 / D2</strong>, ne přes VMO) → Mikulov → Vídeň (obchvat S1) → <strong>A2 Štýrský Hradec</strong> → Maribor → Lublaň → Postojna → Divača → Buzet → Vrsar. Přibližně 850–880 km (odhad, ověřte v mapách).</p>
+      <p class="small">Trasa přes Klagenfurt a tunel Karawanken je delší a platí se za tunel (~13 €), proto ji nedoporučujeme.</p>
+      <p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&origin=L%C3%ADpa+nad+Orlic%C3%AD&destination=Resort+Belvedere+Vrsar&waypoints=Graz%7CMaribor&travelmode=driving">Trasa v Google Maps</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://www.dopravniinfo.cz/">dopravniinfo.cz</a></p>
+    </div>
+    <div class="card pad">
+      <h4>Mýtné a poplatky (odhad celé cesty ~45 €)</h4>
+      <table class="mini">
+        <tr><th>Země</th><th>Co</th><th>Cena</th></tr>
+        <tr><td>Rakousko</td><td>10denní digitální známka (A2 bez zvláštního úseku)</td><td>12,80 €</td></tr>
+        <tr><td>Slovinsko</td><td>e-vinjeta 7 dní: <a target="_blank" rel="noopener" href="https://evinjeta.dars.si/">evinjeta.dars.si</a></td><td>16 €</td></tr>
+        <tr><td>Chorvatsko</td><td>Istrijská Y, Buzet–Vrsar (neověřeno)</td><td>~5–10 € / směr</td></tr>
+      </table>
+      <p class="small muted">Palivo: 70–90 l na jeden směr, ~120–150 € (1,5–1,7 €/l).</p>
+    </div>
+  </div>
+  <h3>Nocleh po cestě</h3>
+  <p>Odjezd ve 13:00 a čistých 9–10 h by znamenalo příjezd kolem půlnoci. S malými dětmi je lepší přespat ve <strong>Štýrském Hradci</strong> (6–7 h, zbývá ~4 h) nebo v <strong>Mariboru</strong>, rodinný apartmán / hotel 80–130 € (odhad). Konkrétní ubytování přes <a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.cs.html?ss=Maribor&checkin=2026-10-27&checkout=2026-10-28&group_adults=2&group_children=2&no_rooms=1">Booking (Maribor)</a> nebo <a target="_blank" rel="noopener" href="https://www.booking.com/searchresults.cs.html?ss=Graz&checkin=2026-10-27&checkout=2026-10-28&group_adults=2&group_children=2&no_rooms=1">Graz</a>. Zpáteční cestu 1. 11. lze jet na jeden zátah (11–13 h, svátek = kolony) nebo znovu rozdělit.</p>
+  <p class="small muted">Hranice: Chorvatsko i Slovinsko jsou v Schengenu, ale Slovinsko a Rakousko občas provádějí namátkové kontroly. Děti potřebují platný občanský průkaz nebo pas.</p>
+</section>
+
+<section id="hotel">
+  <h2>Hotel: Maistra Resort Belvedere</h2>
+  <div class="grid2">
+    <div class="card pad">
+      <ul class="kv">
+        <li><span>Adresa</span>Pineta 4, 52450 Vrsar</li>
+        <li><span>Poloha</span>300 m pěšky po promenádě do centra Vrsaru</li>
+        <li><span>Parkování</span>zdarma</li>
+        <li><span>Jídlo</span>hlavní restaurace se snídaní, Lovor Real Grill, bary (v listopadu ověřit, co je otevřené)</li>
+        <li><span>Bazény</span>venkovní bazén s toboganem je sezónní (v listopadu nejspíš zavřený). Vnitřní bazén a malé wellness jsou v sousedním Hotelu Pineta (ověřit)</li>
+        <li><span>Děti</span>MaiSky Kids Club (provoz v listopadu ověřit)</li>
+        <li><span>Kontakt</span><a href="tel:+385528002050">+385 52 800 250</a> · hello@maistra.hr</li>
+      </ul>
+      <p><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Resort+Belvedere+Vrsar">Mapa</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://www.maistra.com/properties/resort-belvedere/">maistra.com</a></p>
+    </div>
+    <div class="card pad">
+      <h4>Co se zeptat při rezervaci</h4>
+      <ol class="small">
+        <li>Je Belvedere otevřený 28. 10. – 1. 11. 2026?</li>
+        <li>Které restaurace, bazény, wellness a dětský klub jsou v provozu?</li>
+        <li>Polopenze? Cena pokoje pro 2 dospělé a 2 děti, snídaně?</li>
+        <li>Turistická taxa pro děti? Check-in 15:00, check-out 11:00 (obvykle)</li>
+        <li>Dětské postýlky a vysoké židličky?</li>
+      </ol>
+      <p class="small muted">Číslo na plné rezervace: Maistra Reservation. Pokud je Belvedere zavřený, nabídnou náhradu (Hotel Pineta nebo jiný hotel Maistra).</p>
+    </div>
+  </div>
+</section>
+
+<section id="itinerar">
+  <h2>Itinerář den po dni</h2>
+  <div class="days" id="days"></div>
+</section>
+
+<section id="atrakce">
+  <h2>Co navštívit s malými dětmi</h2>
+  <div class="attractions" id="places"></div>
+  <p class="small muted">Dětské hřiště a promenáda ve Vrsaru jsou nejblíž (300 m od hotelu) a zdarma. Zavřené jsou Dinopark Funtana, Aquarium Rovinj (pravděpodobně) a Aquacolors Poreč.</p>
+</section>
+
+<section id="gastro">
+  <h2>Víno, olivy, lanýže a jídlo</h2>
+  <p>Konec října je sezóna bílých lanýžů (do 8. 11.), nového olivového oleje a mladých vín. Většina vinařství pracuje <strong>jen po předchozí domluvě</strong>, o svátcích a nedělích bývá zavřeno.</p>
+  <div class="attractions" id="food"></div>
+  <p class="small muted">Další tipy k ověření: Damjanić (Kanfanar) a Meneghetti (u Rovinje) jsou nejblíž Vrsaru (15–25 min). Kozlović (Momjan) je daleko (~60 km), degustace 50–60 € / osoba. Trh v Pule (denně 7–14) a Poreči (6–14). Festival fuži se v termínu nenašel.</p>
+</section>
+
+<section id="mapa">
+  <h2>Mapa</h2>
+  <div id="map"></div>
+  <p class="small muted"><span class="dot red"></span> s dětmi <span class="dot blue"></span> víno a jídlo <span class="dot dark"></span> hotel. Polohy jsou orientační, u neověřených míst použijte odkaz „Mapa“.</p>
+</section>
+
+<section id="rozpocet">
+  <h2>Rozpočet (odhad pro rodinu)</h2>
+  <div class="controls card pad">
+    <label class="small">Cena hotelu za pobyt (4 noci) v €: <input type="number" id="hotelInput" min="0" step="10" value="0"></label>
+    <div class="opts" id="opts"></div>
+  </div>
+  <div class="summary" id="summary"></div>
+  <div class="tablewrap"><table class="budget" id="budget"></table></div>
+  <p class="small muted">Rozpočet je pro 4 osoby (2 dospělí + 2 děti), ceny v eurech přepočtené kurzem ČNB 24,325 Kč/€. Položky s ≈ jsou odhady. Cenu hotelu nemám, doplňte ji z rezervace.</p>
+</section>
+
+<section id="overit">
+  <h2>Co zavolat / zařídit před cestou</h2>
+  <ol class="todo">
+    <li><label><input type="checkbox"> <strong>Maistra Belvedere</strong>: otevřeno? Rezervace, polopenze, wellness, dětský klub (+385 52 800 250)</label></li>
+    <li><label><input type="checkbox"> Nocleh ve Štýrském Hradci / Mariboru na 27. 10.</label></li>
+    <li><label><input type="checkbox"> Rakouská známka (10 dní), <a target="_blank" rel="noopener" href="https://evinjeta.dars.si/">slovinská e-vinjeta</a></label></li>
+    <li><label><input type="checkbox"> Aktuální stav tunelů v Brně na <a target="_blank" rel="noopener" href="https://www.dopravniinfo.cz/">dopravniinfo.cz</a> (cesta tam i zpět)</label></li>
+    <li><label><input type="checkbox"> <strong>Zigante</strong> (+385 91 430 1200): bude se 31. 10. konat veletrh a hledání lanýžů? Cena pro děti?</label></li>
+    <li><label><input type="checkbox"> Matošević (+385 52 448 558): degustace a děti, cena</label></li>
+    <li><label><input type="checkbox"> Chiavalon: ochutnávka oleje, otevírací doba</label></li>
+    <li><label><input type="checkbox"> Pula Aréna a Akvárium (+385 52 381 402): listopadové časy</label></li>
+    <li><label><input type="checkbox"> Brijuni: jízdní řád lodí, lístky na shop.np-brijuni.hr (volitelně)</label></li>
+    <li><label><input type="checkbox"> Rezervace večeře: Kod Luce / Trost (28. 10.), Konoba Mondo (31. 10.)</label></li>
+    <li><label><input type="checkbox"> Občanské průkazy nebo pasy pro děti, pojištění, EHIC</label></li>
+    <li><label><input type="checkbox"> Autosedačky, oblečení do deště, čepice a bundy, deštník</label></li>
+  </ol>
+</section>
+
+<footer class="small muted">
+  <p>Připraveno 17. 10. 2026. Mnohé údaje (ceny, otevírací doby) pocházejí z agregátorů a jsou označeny jako k ověření. Fotografie: Wikimedia Commons (odkaz na zdroj u každé fotky). Mapa © OpenStreetMap.</p>
+</footer>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
