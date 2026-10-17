@@ -56,13 +56,12 @@ if (window.L) {
 
 // Rozpočet
 const chosen = new Set();
-let hotelEur = 0;
 function renderBudget() {
   const rows = []; let tot = 0;
   BUDGET.forEach((r, i) => {
     if (r.g) { rows.push(`<tr class="grp"><td colspan="3">${r.g}</td></tr>`); return; }
     if (r.opt && !chosen.has(i)) return;
-    const eur = r.input === "hotel" ? hotelEur : r.eur;
+    const eur = r.eur;
     tot += eur;
     rows.push(`<tr><td>${r.label}${r.est ? ' <span class="est" title="odhad">≈</span>' : ""}</td><td>${fmtE(eur)}</td><td class="tot">${fmt(eur * EUR)}</td></tr>`);
   });
@@ -70,7 +69,7 @@ function renderBudget() {
     `<thead><tr><th>Položka</th><th>EUR</th><th>Kč</th></tr></thead><tbody>${rows.join("")}</tbody>
      <tfoot><tr><td>Celkem</td><td>${fmtE(tot)}</td><td>${fmt(tot * EUR)}</td></tr></tfoot>`;
   document.getElementById("summary").innerHTML =
-    `<div class="fact big"><span class="lbl">Celkem</span><strong>${fmt(tot * EUR)}</strong><span>${fmtE(tot)}${hotelEur ? "" : " · bez hotelu"}</span></div>
+    `<div class="fact big"><span class="lbl">Celkem</span><strong>${fmt(tot * EUR)}</strong><span>${fmtE(tot)} · bez hotelu</span></div>
      <div class="fact"><span class="lbl">Na osobu</span><strong>${fmt(tot * EUR / 4)}</strong><span>2 dospělí + 2 děti</span></div>`;
   document.getElementById("factTotal").textContent = "≈ " + fmt(Math.round(tot * EUR / 1000) * 1000);
 }
@@ -79,7 +78,6 @@ document.getElementById("opts").innerHTML = "<span class='small'>Přidat volitel
 document.getElementById("opts").addEventListener("change", e => {
   const i = +e.target.dataset.i; e.target.checked ? chosen.add(i) : chosen.delete(i); renderBudget();
 });
-document.getElementById("hotelInput").addEventListener("input", e => { hotelEur = +e.target.value || 0; renderBudget(); });
 
 const todo = [...document.querySelectorAll(".todo input")];
 try { const s = JSON.parse(localStorage.getItem("vrsar26-todo") || "[]"); todo.forEach((c, i) => c.checked = !!s[i]); } catch (e) {}
